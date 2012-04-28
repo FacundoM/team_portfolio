@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Luke Carlson Portfolio Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="home.html">jLukeCarlson</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="home.html">Home</a></li>
+	      <!--  <li class="divider-vertical"></li> -->
+              <li class="active"><a href="projects.html">Projects</a></li>
+	      <li><a href="resume.html">Resume</a></li>
+	      <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Python</li>
+              <li><a href="#twitterdefbot">Twitter Definition Bot</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Java or Processing</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">HTML CSS Javascript</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">ActionScript 2.0</li>
+              <li><a href="#parashoot">Parashoot</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+	<div class="span9">
+	  <!-- Main welcome Hero-->
+	  <div class="hero-unit">
+	    <h1>Projects</h1>
+	    <p>Links to each project are located in the sidebar, or you can scroll down and view them all at once</p>
+	  </div>
+	  <!-- Twitter Bot  Hero-->
+	  <div id= "twitterdefbot" class="hero-unit-project">
+	    <h2 class = "centered">Twitter Definition Bot</h2>
+	    <p>The purpose of this project was to make a twitter account to which anyone could tweet at and it would respond with the definition of the tweeted word</p>
+	    <br/>
+	    <h3 class="centered"><em>How?</em></h3>
+	    <br/>
+	    <p> First we checked twitter's JSON feed of recent tweets <a href="https://twitter.com/#!/definitionbot">@DefinitionBot</a> (the feed can be seen <a href="http://search.twitter.com/search.json?q=@DefinitionBot"> here</a>) and parsed out new tweets. </p>
+	    <p>From there we extracted the word and put it through Abbreviations.com's API to get a definition. We chose Abbr's API because it provided its definitions in a consise format, which is important considering that Tweets are maxed out at 140 characters.</p>
+	    <p>After that we parsed the XML response to get the definition of the word. From there we concatenated the definition along with the word into a tweet that was directed back at the original user.</p>
+	    <p>Isues and Bugs we faced included a problem where <a href="https://twitter.com/#!/definitionbot">@DefinitionBot</a> would tweet back two definitions at a user, issues that arose when the tweet was too long, and determining whether tweets from twitter's stream were new or just repeated</p>
+	    <p><strong>	Programming Language:</strong> Python</p>
+	    <p><strong>	APIs Used:</strong> Twitter API, Abbreviations.com API </p>
+	    <p><strong>	A few Modules used:</strong> JSON, simpleJSON, BeautifulSoup, urllib2, tweepy </p>
+	    <ul class="thumbnails">
+	      <li>
+		<a href="https://twitter.com/#!/definitionbot" target="_blank" class="thumbnail">
+		  <img src="assets/img/definitionbot_tweets.png" alt="">
+		</a>
+		<a href="http://www.abbreviations.com/services/v1/defs.aspx?tokenid=tk1765&word=test" target="_blank" class="thumbnail">
+		  <img src="assets/img/example_definition2.png" alt="">
+		</a>
+	      </li>
+	    </ul>
+	    <a class="btn btn-success" target="_blank" href="https://twitter.com/#!/definitionbot">View Live Project on Twitter</a>
+	    <a class="btn" target="_blank" href="https://github.com/jLukeC/definition-bot">View on GitHub</a>
+	  </div>
+	  <br/> <!--END OF TWITTER DEFINITION BOT DIV -->
+
+	  <!-- TeknoZombi-Parashoot  Hero-->
+	  <div id= "parashoot" class="hero-unit-project">
+	    <h2 class = "centered">Parashoot (ActionScript 2.0)</h2>
+	    <em><p>This was an early project of mine from 2009 when I was a freshman in highschool. This was  before I entered the world of web design or Python. </p></em>
+	    <p>Back when I used ActionScript 2.0 (gasp!) I made a vertical shooter. The premise is a man parachuting who has to avoid objects to last as long as possible. He has packages to drop down to hit and eliminate the obstacles as well as powerups and upgrades in the game. I made all the art (don't judge me, I wasn't an artist then, and I'm not exactly Picasso now). I made this game as a submission for Stride Gum's Longest Lasting Game Competition</p>
+	    <br/>
+	    <h3 class="centered"><em>More Info</em></h3>
+	    <br/>
+	    <p> I enjoyed making an animated instructions page. I had trouble making sure the menus worked in all situations. Muting/playing music at the right moment was an issue. I attempted to make a unique design and chose an abnormal color scheme. Overall I enjoyed making this game and it was a fun learning experience
+	    </p>
+	    <p><strong>	Programming Language:</strong> Actionscript 2.0</p>
+	    <!-- The following is a span3 of the first image -->
+	    <div class = "row">
+	      <div class="centered">
+		<div class = "span3">
+		  <ul class="thumbnails">
+		    <li>
+		      <p class="thumbnail">
+			<img src="assets/img/parashoot_example.png" alt="">
+		      </p>
+		    </li>
+		  </ul>
+		</div>
+		<!-- The following is a span3 of the second image -->
+		<div class = "span3">
+		  <ul class="thumbnails">
+		    <li>
+		      <p class = "thumbnail">
+			<img src="assets/img/parashoot_example2.png" alt="">
+		      </p>
+		    </li>
+		  </ul>
+		  <!-- old loaction of button -->
+		</div>
+	      </div>
+	      <div class = "span3">
+		<a class="btn btn-primary" target="_blank" href="http://www.kongregate.com/games/teknoZombi/parashoot">View Live on Kongregate</a>
+	      </div>
+	      <div class = "span3">
+		<a class="btn btn-inverse" href="http://www.newgrounds.com/portal/view/523176" target="_blank">View Live on NewGrounds!</a>
+	      </div>
+	    </div>
+	  </div>
+	  <br/> <!--END OF TEKNOZOMBI DIV -->
+	</div>
+
+      </div> <!-- /container -->
+
+      <!-- Le javascript
+	   ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="../assets/js/jquery.js"></script>
+      <script src="../assets/js/bootstrap-transition.js"></script>
+      <script src="../assets/js/bootstrap-alert.js"></script>
+      <script src="../assets/js/bootstrap-modal.js"></script>
+      <script src="../assets/js/bootstrap-dropdown.js"></script>
+      <script src="../assets/js/bootstrap-scrollspy.js"></script>
+      <script src="../assets/js/bootstrap-tab.js"></script>
+      <script src="../assets/js/bootstrap-tooltip.js"></script>
+      <script src="../assets/js/bootstrap-popover.js"></script>
+      <script src="../assets/js/bootstrap-button.js"></script>
+      <script src="../assets/js/bootstrap-collapse.js"></script>
+      <script src="../assets/js/bootstrap-carousel.js"></script>
+      <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
