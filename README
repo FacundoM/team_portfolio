@@ -3,3 +3,10 @@ This is a project for designing a group website that displays projects we have d
 More info to be added
 
 Confirming that more info needs to be added
+
+
+
+git add .
+git commit
+git push
+git pull
